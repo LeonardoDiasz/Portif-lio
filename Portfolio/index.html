@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfólio profissional de Leonardo Dias, estudante de Ciência da Computação.">
+  <title>Leonardo Dias | Estudante de Ciência da Computação</title>
+  <link rel="stylesheet" href="style (3).css">
+</head>
+<body>
+
+  <!-- Link para teclado: pula o menu e vai direto ao conteúdo -->
+  <a class="pular-menu" href="#conteudo">Ir para o conteúdo</a>
+
+  <!-- CABEÇALHO E MENU -->
+  <header class="topo" id="inicio">
+    <nav class="menu" aria-label="Menu principal">
+      <a class="menu__marca" href="#inicio">Leonardo Dias</a>
+      <ul class="menu__lista">
+        <li><a href="#sobre">Sobre mim</a></li>
+        <li><a href="#formacao">Formação</a></li>
+        <li><a href="#competencias">Competências</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#curriculo">Currículo</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <!-- APRESENTAÇÃO (fundo: arte enviada, definida no CSS) -->
+    <div class="hero">
+      <div class="moldura hero__painel">
+        <figure class="hero__foto">
+          <img src="assets/foto-perfil.jpg"
+               alt="Foto de Leonardo Dias, usando colete preto, camisa escura e gravata vermelha"
+               width="899" height="1123">
+        </figure>
+        <div class="hero__texto">
+          <h1>Leonardo Dias</h1>
+          <p class="hero__titulo">Estudante de Ciência da Computação</p>
+          <p>Sou estudante de tecnologia interessado em desenvolvimento de soluções digitais. Atualmente, estou desenvolvendo meus conhecimentos por meio de projetos acadêmicos e pessoais.</p>
+          <p class="botoes">
+            <a class="botao botao--cheio" href="#projetos">Ver projetos</a>
+            <a class="botao" href="#contato">Entrar em contato</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- SOBRE MIM -->
+    <section class="secao" id="sobre" aria-labelledby="titulo-sobre">
+      <h2 id="titulo-sobre">Sobre mim</h2>
+      <div class="moldura bloco">
+        <p>Curso Ciência da Computação na Universidade Cruzeiro do Sul e estou construindo minha base em tecnologia com projetos acadêmicos e pessoais.</p>
+        <h3>Área de interesse</h3>
+        <ul class="etiquetas">
+          <li>Banco de dados</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FORMAÇÃO -->
+    <section class="secao" id="formacao" aria-labelledby="titulo-formacao">
+      <h2 id="titulo-formacao">Formação e cursos</h2>
+      <div class="grade grade--3">
+        <article class="moldura bloco">
+          <h3>Graduação</h3>
+          <p><strong>Ciência da Computação</strong></p>
+          <p>Universidade Cruzeiro do Sul</p>
+          <p>Cursando o 2º semestre, com previsão de conclusão em 2029.</p>
+        </article>
+        <article class="moldura bloco">
+          <h3>Cursos</h3>
+          <ul class="lista-simples">
+            <li>Excel</li>
+            <li>Power BI</li>
+            <li>Fundamentos de Python</li>
+          </ul>
+          <!-- Se tiver certificado, acrescente instituição e ano de cada curso -->
+        </article>
+        <article class="moldura bloco">
+          <h3>Idiomas</h3>
+          <ul class="lista-simples">
+            <li>Inglês: nível intermediário</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- COMPETÊNCIAS TÉCNICAS E COMPORTAMENTAIS -->
+    <section class="secao" id="competencias" aria-labelledby="titulo-competencias">
+      <h2 id="titulo-competencias">Competências</h2>
+
+      <h3 class="subtitulo">Técnicas</h3>
+      <div class="grade grade--2">
+        <article class="moldura bloco">
+          <h4>Nível intermediário</h4>
+          <ul class="nivel">
+            <li><span>Excel</span> <span class="nivel__barra nivel__barra--2" aria-hidden="true"></span></li>
+            <li><span>Power BI</span> <span class="nivel__barra nivel__barra--2" aria-hidden="true"></span></li>
+            <li><span>Python</span> <span class="nivel__barra nivel__barra--2" aria-hidden="true"></span></li>
+          </ul>
+        </article>
+        <article class="moldura bloco">
+          <h4>Nível inicial</h4>
+          <ul class="nivel">
+            <li><span>HTML</span> <span class="nivel__barra nivel__barra--1" aria-hidden="true"></span></li>
+            <li><span>CSS</span> <span class="nivel__barra nivel__barra--1" aria-hidden="true"></span></li>
+            <li><span>C</span> <span class="nivel__barra nivel__barra--1" aria-hidden="true"></span></li>
+            <li><span>GitHub</span> <span class="nivel__barra nivel__barra--1" aria-hidden="true"></span></li>
+          </ul>
+        </article>
+      </div>
+
+      <h3 class="subtitulo">Comportamentais</h3>
+      <div class="grade grade--3">
+        <article class="moldura bloco">
+          <h4>Adaptabilidade</h4>
+          <p>Em desenvolvimento.</p>
+        </article>
+        <article class="moldura bloco">
+          <h4>Trabalho em equipe</h4>
+          <p>Em desenvolvimento.</p>
+        </article>
+        <article class="moldura bloco">
+          <h4>Aprendizado rápido</h4>
+          <p>Em desenvolvimento.</p>
+        </article>
+      </div>
+      <!-- Quando tiver situações reais (trabalho em grupo, projeto pessoal), descreva-as em cada cartão -->
+    </section>
+
+    <!-- PROJETOS -->
+    <section class="secao" id="projetos" aria-labelledby="titulo-projetos">
+      <h2 id="titulo-projetos">Projetos</h2>
+      <article class="moldura projeto">
+        <img class="projeto__imagem"
+             src="assets/fundo.png"
+             alt="Arte em preto, branco e vermelho com vértebras de uma centopeia gigante e flores higanbana vermelhas"
+             width="1600" height="941">
+        <div class="projeto__texto">
+          <h3>Portfólio Profissional</h3>
+          <p>Site que apresenta meu perfil, minha formação e minhas competências, com o currículo disponível online.</p>
+          <dl class="projeto__dados">
+            <dt>Tecnologias</dt>
+            <dd>HTML5, CSS3, imagens locais e GitHub Pages</dd>
+            <dt>Participação</dt>
+            <dd>Individual</dd>
+            <dt>Aprendizagens</dt>
+            <dd>Estrutura de HTML, estilização com CSS e uso de GitHub</dd>
+          </dl>
+          <p class="botoes">
+            <a class="botao botao--cheio" href="https://github.com/LeonardoDiasz" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
+            <!-- Depois de publicar, troque o botão abaixo por:
+                 <a class="botao" href="[INSERIR LINK DO GITHUB PAGES APÓS A PUBLICAÇÃO]">Abrir o site</a> -->
+            <span class="botao botao--inativo" aria-disabled="true">Link do site em breve</span>
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <!-- CURRÍCULO -->
+    <section class="secao" id="curriculo" aria-labelledby="titulo-curriculo">
+      <h2 id="titulo-curriculo">Currículo</h2>
+      <div class="moldura bloco">
+        <p>O currículo em PDF será disponibilizado em breve.</p>
+        <p class="botoes">
+          <span class="botao botao--inativo" aria-disabled="true">Currículo em breve</span>
+          <!-- Quando o PDF estiver pronto, salve em assets/curriculo.pdf e troque o botão acima por:
+               <a class="botao botao--cheio" href="assets/curriculo.pdf" target="_blank" rel="noopener noreferrer">Abrir currículo (PDF)</a> -->
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="secao" id="contato" aria-labelledby="titulo-contato">
+      <h2 id="titulo-contato">Contato</h2>
+      <div class="moldura bloco">
+        <p>Fale comigo por um destes canais:</p>
+        <p class="botoes">
+          <a class="botao botao--cheio" href="mailto:Leonardo1258@outlook.com">E-mail</a>
+          <a class="botao" href="https://www.linkedin.com/in/leonardo-dias-a4121336b" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="botao" href="https://github.com/LeonardoDiasz" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </p>
+        <p class="nota">Leonardo1258@outlook.com</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ COM AUTORIA -->
+  <footer class="rodape">
+    <p>Desenvolvido por Leonardo Dias para a disciplina Design Profissional, Universidade Cruzeiro do Sul, 2026.</p>
+    <p>Feito com HTML5 e CSS3. Publicado no GitHub Pages.</p>
+  </footer>
+
+</body>
+</html>

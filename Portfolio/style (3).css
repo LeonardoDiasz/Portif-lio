@@ -1,0 +1,395 @@
+/* =========================================================
+   Portfólio de Leonardo Dias
+   Tema: arte em preto, branco-osso e vermelho higanbana
+   ========================================================= */
+
+/* ---------- 1. Cores, fontes e espaçamentos (altere aqui) ---------- */
+:root {
+  --preto: #070707;          /* fundo da página */
+  --painel: #101011;         /* fundo dos cartões */
+  --osso: #efe9df;           /* texto principal */
+  --cinza: #b9b3a8;          /* texto secundário */
+  --vermelho: #c4161c;       /* molduras e botões preenchidos */
+  --vermelho-escuro: #5e0b0f;/* sombras das molduras */
+  --vermelho-claro: #ff5459; /* textos em destaque (contraste sobre o preto) */
+
+  --fonte-titulo: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", Georgia, "Times New Roman", serif;
+  --fonte-texto: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+
+  --largura: 68rem;
+  --espaco: 1.5rem;
+}
+
+/* ---------- 2. Base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 5rem; /* evita que o menu fixo cubra o título da seção */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--preto);
+  color: var(--osso);
+  font-family: var(--fonte-texto);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 0.75rem;
+}
+
+h2 {
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+  border-left: 0.35rem solid var(--vermelho);
+}
+
+h3 { font-size: 1.35rem; }
+h4 { font-size: 1.1rem; color: var(--vermelho-claro); }
+
+p { margin: 0 0 1rem; max-width: 62ch; }
+ul { margin: 0; padding: 0; list-style: none; }
+
+a { color: var(--vermelho-claro); }
+
+/* Foco visível para navegação por teclado */
+a:focus-visible {
+  outline: 3px solid var(--osso);
+  outline-offset: 3px;
+}
+
+/* ---------- 3. Link "pular menu" (aparece só com o teclado) ---------- */
+.pular-menu {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 20;
+  padding: 0.6rem 1rem;
+  background: var(--osso);
+  color: var(--preto);
+  font-weight: 700;
+}
+
+.pular-menu:focus {
+  top: 1rem;
+}
+
+/* ---------- 4. Moldura vermelha (assinatura visual, vinda da arte) ---------- */
+.moldura {
+  background: var(--painel);
+  border: 2px solid var(--vermelho);
+  box-shadow: 0.5rem 0.5rem 0 var(--vermelho-escuro);
+}
+
+.bloco {
+  padding: var(--espaco);
+}
+
+/* ---------- 5. Menu ---------- */
+.menu {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding: 0.75rem var(--espaco);
+  background: rgba(7, 7, 7, 0.96);
+  border-bottom: 2px solid var(--vermelho);
+}
+
+.menu__marca {
+  font-family: var(--fonte-titulo);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--osso);
+  text-decoration: none;
+}
+
+.menu__lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+}
+
+.menu__lista a {
+  display: inline-block;
+  padding: 0.35rem 0;
+  color: var(--osso);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+.menu__lista a:hover {
+  border-bottom-color: var(--vermelho);
+}
+
+/* ---------- 6. Apresentação (hero) com a arte de fundo ---------- */
+.hero {
+  padding: clamp(2rem, 8vw, 6rem) var(--espaco);
+  background:
+    linear-gradient(rgba(7, 7, 7, 0.35), rgba(7, 7, 7, 0.55)),
+    url("assets/fundo.png") center / cover no-repeat;
+}
+
+.hero__painel {
+  display: grid;
+  grid-template-columns: minmax(10rem, 16rem) 1fr;
+  gap: 2rem;
+  align-items: center;
+  max-width: var(--largura);
+  margin: 0 auto;
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+  background: rgba(7, 7, 7, 0.93);
+}
+
+.hero__foto {
+  margin: 0;
+  border: 2px solid var(--vermelho);
+}
+
+.hero__foto img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 8vw, 4.75rem);
+  letter-spacing: -0.01em;
+}
+
+.hero__titulo {
+  font-family: var(--fonte-titulo);
+  font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+  color: var(--vermelho-claro);
+}
+
+/* ---------- 7. Seções e grades ---------- */
+.secao {
+  max-width: var(--largura);
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 4.5rem) var(--espaco);
+}
+
+.subtitulo {
+  margin: 2rem 0 1rem;
+  color: var(--cinza);
+  font-size: 1.15rem;
+}
+
+.grade {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.grade--2 { grid-template-columns: repeat(2, 1fr); }
+.grade--3 { grid-template-columns: repeat(3, 1fr); }
+
+.lista-simples li {
+  padding: 0.35rem 0;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.lista-simples li:last-child {
+  border-bottom: 0;
+}
+
+/* Etiquetas (área de interesse) */
+.etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.etiquetas li {
+  padding: 0.3rem 0.9rem;
+  border: 1px solid var(--vermelho);
+  color: var(--osso);
+}
+
+/* ---------- 8. Competências técnicas: nome + barra de nível ---------- */
+.nivel li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.nivel li:last-child {
+  border-bottom: 0;
+}
+
+/* Barra decorativa: 1 de 3 = inicial, 2 de 3 = intermediário */
+.nivel__barra {
+  flex: none;
+  width: 5rem;
+  height: 0.5rem;
+  background: linear-gradient(90deg, var(--vermelho) var(--preenchido), #2c2c2c var(--preenchido));
+}
+
+.nivel__barra--1 { --preenchido: 33.33%; }
+.nivel__barra--2 { --preenchido: 66.66%; }
+
+/* ---------- 9. Projeto ---------- */
+.projeto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+}
+
+.projeto__imagem {
+  width: 100%;
+  height: 100%;
+  min-height: 15rem;
+  object-fit: cover;
+  border-right: 2px solid var(--vermelho);
+}
+
+.projeto__texto {
+  padding: var(--espaco);
+}
+
+.projeto__dados {
+  margin: 0 0 1.25rem;
+}
+
+.projeto__dados dt {
+  margin-top: 0.75rem;
+  color: var(--vermelho-claro);
+  font-weight: 700;
+}
+
+.projeto__dados dd {
+  margin: 0;
+  color: var(--cinza);
+}
+
+/* ---------- 10. Botões ---------- */
+.botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  max-width: none;
+  margin: 1.25rem 0 0;
+}
+
+.botao {
+  display: inline-block;
+  padding: 0.65rem 1.4rem;
+  border: 2px solid var(--vermelho);
+  background: transparent;
+  color: var(--osso);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.botao:hover {
+  background: var(--vermelho-escuro);
+}
+
+.botao--cheio {
+  background: var(--vermelho);
+  color: #fff;
+}
+
+.botao--cheio:hover {
+  background: #a31218;
+}
+
+/* Botão que ainda não tem link (currículo e site publicado) */
+.botao--inativo {
+  border-style: dashed;
+  border-color: #6a6a6a;
+  color: var(--cinza);
+  cursor: not-allowed;
+}
+
+.botao--inativo:hover {
+  background: transparent;
+}
+
+.nota {
+  margin: 1rem 0 0;
+  color: var(--cinza);
+  font-size: 0.95rem;
+}
+
+/* ---------- 11. Rodapé ---------- */
+.rodape {
+  padding: 2rem var(--espaco);
+  border-top: 2px solid var(--vermelho);
+  text-align: center;
+  color: var(--cinza);
+  font-size: 0.95rem;
+}
+
+.rodape p {
+  max-width: none;
+  margin: 0.25rem 0;
+}
+
+/* ---------- 12. Responsividade ---------- */
+@media (max-width: 52rem) {
+  .grade--3 { grid-template-columns: 1fr; }
+  .grade--2 { grid-template-columns: 1fr; }
+
+  .projeto { grid-template-columns: 1fr; }
+
+  .projeto__imagem {
+    min-height: 0;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-right: 0;
+    border-bottom: 2px solid var(--vermelho);
+  }
+}
+
+@media (max-width: 40rem) {
+  body { font-size: 1rem; }
+
+  .hero__painel {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .hero__foto {
+    max-width: 14rem;
+  }
+
+  .menu {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .menu__lista {
+    justify-content: center;
+  }
+}
